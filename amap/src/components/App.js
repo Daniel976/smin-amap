@@ -17,7 +17,8 @@ class App extends React.Component{
         //MAJ du state
         const veggies = {...this.state.veggies};
         // ajouter des produits
-        veggies["veggie-1"] = veggie;
+        const timestamp = Date.now();
+        veggies[`veggie-${timestamp}`] = veggie;
         //appliquer le state
         this.setState({veggies});
     }
